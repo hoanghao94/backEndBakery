@@ -1,0 +1,15 @@
+{
+  "applications": "*",
+  "changelogDate": "20230418102046",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bakery",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Bakery",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

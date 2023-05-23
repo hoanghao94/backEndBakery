@@ -1,0 +1,12 @@
+entity Cake {
+  	id Long,
+    idCustomer Long,
+  	nameCake String,
+	quantity Integer,
+    price Integer,
+}
+
+paginate Cake with pagination
+
+dto * with mapstruct
+service * with serviceClass

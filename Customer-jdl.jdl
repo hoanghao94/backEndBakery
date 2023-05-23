@@ -1,0 +1,14 @@
+entity Customer {
+  	id Long,
+  	name String,
+	phoneNumber String,
+    dateBuy LocalDate,
+    isCalled Boolean,
+    isDelived Boolean,
+    dateDelived LocalDate,
+}
+
+paginate Customer with pagination
+
+dto * with mapstruct
+service * with serviceClass

@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419081228",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "cake",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idCustomer",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nameCake",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cake",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

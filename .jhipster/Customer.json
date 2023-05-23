@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419081211",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "customer",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateBuy",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "isCalled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isDelived",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "dateDelived",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Customer",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}
