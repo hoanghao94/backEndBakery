@@ -1,0 +1,5 @@
+src\main\resources\config\liquibase\master.xml skip
+src\main\java\com\mycompany\myapp\service\dto\CakeDTO.java skip
+src\main\java\com\mycompany\myapp\domain\Customer.java skip
+src\main\java\com\mycompany\myapp\service\dto\CustomerDTO.java skip
+src\main\java\com\mycompany\myapp\domain\Cake.java skip

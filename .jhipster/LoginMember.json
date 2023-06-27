@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20230525151118",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "login_member",
+  "fields": [
+    {
+      "fieldName": "memberName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "LoginMember",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

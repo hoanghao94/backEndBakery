@@ -1,0 +1,10 @@
+entity LoginMember {
+    memberName String
+    password String
+}
+
+paginate LoginMember with pagination
+
+dto * with mapstruct
+
+service * with serviceClass
