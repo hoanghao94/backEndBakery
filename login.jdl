@@ -1,0 +1,11 @@
+entity LoginAccount {
+  	userName String,
+	password String
+
+}
+
+paginate LoginAccount with pagination
+
+dto * with mapstruct
+service * with serviceClass
+service all with serviceImpl except Employee, Job

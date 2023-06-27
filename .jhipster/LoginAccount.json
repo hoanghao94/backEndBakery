@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20230525091603",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "login_account",
+  "fields": [
+    {
+      "fieldName": "userName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "LoginAccount",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
