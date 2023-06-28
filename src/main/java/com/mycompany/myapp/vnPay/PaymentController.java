@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.UnsupportedEncodingException;
@@ -12,17 +13,18 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
+//9704198526191432198
+//Nguyen Van A
+//0715
 @RestController
 @RequestMapping("/api/payment")
 public class PaymentController {
     @GetMapping("/create_payment")
     public ResponseEntity<?> createPayment() throws UnsupportedEncodingException {
         String vnp_TxnRef = Config.getRandomNumber(8);
-//        String vnp_IpAddr = Config.getIpAddress(req);
         String vnp_TmnCode = Config.vnp_TmnCode;
 
-        long amount = 1000000;
+        long amount = 2000000;
 
         Map<String, String> vnp_Params = new HashMap<>();
         vnp_Params.put("vnp_Version", Config.vnp_Version);
@@ -34,6 +36,7 @@ public class PaymentController {
         vnp_Params.put("vnp_Locale", "VN");
         vnp_Params.put("vnp_TxnRef", vnp_TxnRef);
         vnp_Params.put("vnp_OrderInfo", "Thanh toan don hang:" + vnp_TxnRef);
+        vnp_Params.put("vnp_ReturnUrl", Config.vnp_Returnurl);
         Calendar cld = Calendar.getInstance(TimeZone.getTimeZone("Etc/GMT+7"));
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
         String vnp_CreateDate = formatter.format(cld.getTime());
@@ -75,5 +78,23 @@ public class PaymentController {
         paymentResDTO.setMessage("Successful");
         paymentResDTO.setURL(paymentUrl);
         return ResponseEntity.status(HttpStatus.OK).body(paymentResDTO);
+    }
+
+    @GetMapping("/payment_infor")
+    public ResponseEntity<?> paymentInfor(
+        @RequestParam(value= "vnp_Amount") String vnp_Amount,
+        @RequestParam(value= "vnp_BankCode") String vnp_BankCode,
+        @RequestParam(value= "vnp_OrderInfo") String vnp_OrderInfo,
+        @RequestParam(value= "vnp_ResponseCode") String vnp_ResponseCode,
+        @RequestParam(value= "vnp_PayDate") String vnp_PayDate
+        ){
+        PaymentInforDTO paymentInforDTO = new PaymentInforDTO();
+        paymentInforDTO.setVnp_Amount(vnp_Amount);
+        paymentInforDTO.setVnp_BankCode(vnp_BankCode);
+        paymentInforDTO.setVnp_OrderInfo(vnp_OrderInfo);
+        paymentInforDTO.setVnp_ResponseCode(vnp_ResponseCode);
+        paymentInforDTO.setVnp_PayDate(vnp_PayDate);
+
+        return ResponseEntity.status(HttpStatus.OK).body(paymentInforDTO);
     }
 }
