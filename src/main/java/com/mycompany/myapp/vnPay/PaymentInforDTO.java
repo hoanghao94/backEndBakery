@@ -2,7 +2,6 @@ package com.mycompany.myapp.vnPay;
 
 import lombok.Getter;
 import lombok.Setter;
-
 @Getter
 @Setter
 public class PaymentInforDTO {
@@ -11,6 +10,7 @@ public class PaymentInforDTO {
     private String vnp_OrderInfo;
     private String vnp_ResponseCode;
     private String vnp_PayDate;
+
 
     public String getVnp_Amount() {
         return vnp_Amount;
